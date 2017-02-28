@@ -4,17 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FacebookLoginComponent } from './components/facebook-login/facebook-login.component';
+
+import {FacebookService, FacebookLoginResponse} from 'ng2-facebook-sdk';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FacebookLoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [FacebookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
